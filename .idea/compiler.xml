@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test" />
+        <module name="Heydon-study" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="test" target="1.8" />
+      <module name="Heydon-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

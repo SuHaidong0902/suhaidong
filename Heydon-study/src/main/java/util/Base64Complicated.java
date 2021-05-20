@@ -42,7 +42,7 @@ class Complicated {
     }
 }
 
-public class ComplicatedBase64 {
+public class Base64Complicated {
     public static void main(String[] args) {
         String encStr = Complicated.encode("love");
         System.out.println("加密后的结果:" + encStr);
