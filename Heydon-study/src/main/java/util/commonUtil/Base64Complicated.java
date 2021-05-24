@@ -1,4 +1,4 @@
-package util;
+package util.commonUtil;
 
 import java.util.Base64;
 
@@ -14,7 +14,6 @@ class Complicated {
 
     /**
      * 加密处理
-     *
      * @param str 需要加密的字符串，需要与盐值整合
      * @return 加密后的结果
      */
@@ -29,7 +28,6 @@ class Complicated {
 
     /**
      * 解密粗粒
-     *
      * @param str 要解密的内容
      * @return 解密后的原始字符串
      */

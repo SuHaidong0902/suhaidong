@@ -1,4 +1,4 @@
-package util;
+package util.commonUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -14,7 +14,7 @@ class MyTask extends TimerTask{
         System.out.println(Thread.currentThread().getName() + "、定时任务，当前时间：" + System.currentTimeMillis());
     }
 }
-public class Task {
+public class TaskMain {
     public static void main(String[] args) {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new MyTask(),100,1000);

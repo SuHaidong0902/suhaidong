@@ -1,4 +1,4 @@
-package util;
+package util.commonUtil;
 
 import java.util.Optional;
 
@@ -24,7 +24,7 @@ class MessageUtil{
             System.out.println(msg.getContent());
     }
 }
-public class OptionalDemo {
+public class OptionalMain {
     public static void main(String[] args) {
         MessageUtil.useMessage(MessageUtil.getMessage().orElse(new IMessageImpl()));
 

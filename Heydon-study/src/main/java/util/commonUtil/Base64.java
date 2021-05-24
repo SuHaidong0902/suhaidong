@@ -1,4 +1,4 @@
-package util;
+package util.commonUtil;
 
 import static java.util.Base64.*;
 
