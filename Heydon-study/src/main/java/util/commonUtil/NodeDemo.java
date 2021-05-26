@@ -9,23 +9,30 @@ package util.commonUtil;
 interface ILink<E> {
     // 增加链表数据
     void add(E e);
+
     //获取数据的个数
     int size();
+
     //判断是否空集合
     boolean isEmpty();
+
     //返回集合数据
     Object[] toArray();
+
     // 获取指定索引数据
     E get(int index);
+
     // 修改制定索引数据
     void set(int index, E data);
+
     // 判断指定数据是否存在
     boolean contains(E data);
+
     // 数据删除
     void remove(E data);
+
     // 清空链表
     void clean();
-
 
 
 }
@@ -40,61 +47,62 @@ class ILinkImpl<E> implements ILink<E> {
     // 保存返回的数组
     private Object[] returnData;
 
-    private class Node{
+    private class Node {
         private E data;
         private Node next;
-        public Node(E data){
+
+        public Node(E data) {
             this.data = data;
         }
 
-        public void addNode(Node newNode){
-            if (this.next == null){
+        public void addNode(Node newNode) {
+            if (this.next == null) {
                 this.next = newNode;
-            }else{
+            } else {
                 this.next.addNode(newNode);
             }
         }
 
-        public void toArrayNode(){
+        public void toArrayNode() {
             ILinkImpl.this.returnData[ILinkImpl.this.foot++] = this.data;
-            if (this.next != null){
+            if (this.next != null) {
                 this.next.toArrayNode();
             }
         }
 
-        public E getNode(int index){
-            if (ILinkImpl.this.foot++ == index){
+        public E getNode(int index) {
+            if (ILinkImpl.this.foot++ == index) {
                 return this.data;
             } else {
                 return this.next.getNode(index);
             }
         }
 
-        public void setNode(int index, E data){
-            if (ILinkImpl.this.foot ++ == index){
+        public void setNode(int index, E data) {
+            if (ILinkImpl.this.foot++ == index) {
                 this.data = data;
-            }else{
+            } else {
                 this.next.setNode(index, data);
             }
         }
 
-        public boolean containsNode(E data){
-            if (this.data.equals(data)){
+        public boolean containsNode(E data) {
+            if (this.data.equals(data)) {
                 return true;
-            }else {
-                if (this.next == null){
+            } else {
+                if (this.next == null) {
                     return false;
-                }else {
+                } else {
                     return this.next.containsNode(data);
                 }
             }
         }
 
-        public void removeNode(Node previous, E data){
-            if (this.data.equals(data)){
+        public void removeNode(Node previous, E data) {
+            if (this.data.equals(data)) {
                 previous.next = this.next;
-            }else{
-                if (this.next != null){
+            } else {
+                if (this.next != null) {
                     this.next.removeNode(previous, data);
                 }
             }
@@ -104,17 +112,17 @@ class ILinkImpl<E> implements ILink<E> {
 
     @Override
     public void add(E e) {
-        if (e == null){
+        if (e == null) {
             return;
         }
         //数据本身不具有关联特性，只有Node类有，必须要关联到Node里
         Node newNode = new Node(e);
-        if (this.root == null){
+        if (this.root == null) {
             this.root = newNode;
-        }else{
+        } else {
             this.root.addNode(newNode);
         }
-        this.count ++;
+        this.count++;
     }
 
     @Override
@@ -129,7 +137,7 @@ class ILinkImpl<E> implements ILink<E> {
 
     @Override
     public Object[] toArray() {
-        if (this.isEmpty()){
+        if (this.isEmpty()) {
             return null;
         }
         this.foot = 0;
@@ -140,7 +148,7 @@ class ILinkImpl<E> implements ILink<E> {
 
     @Override
     public E get(int index) {
-        if (index > this.count){
+        if (index > this.count) {
             return null;
         }
         this.foot = 0;
@@ -149,7 +157,7 @@ class ILinkImpl<E> implements ILink<E> {
 
     @Override
     public void set(int index, E data) {
-        if (index > this.count){
+        if (index > this.count) {
             return;
         }
         this.foot = 0;
@@ -158,7 +166,7 @@ class ILinkImpl<E> implements ILink<E> {
 
     @Override
     public boolean contains(E data) {
-        if (data == null){
+        if (data == null) {
             return false;
         }
         return this.root.containsNode(data);
@@ -169,8 +177,8 @@ class ILinkImpl<E> implements ILink<E> {
         if (this.contains(data)) {
             if (this.root.containsNode(data)) {
                 this.root = this.root.next;
-            }else{
-                this.root.next.removeNode(this.root,data);
+            } else {
+                this.root.next.removeNode(this.root, data);
             }
         }
         this.count--;
@@ -193,12 +201,12 @@ public class NodeDemo {
         boolean real = all.isEmpty();
 
         Object[] result = all.toArray();
-        for (Object x : result){
-            System.out.println("---:"+x);
+        for (Object x : result) {
+            System.out.println("---:" + x);
         }
 
         System.out.println(all.get(2));
-        all.set(2,"shuai");
+        all.set(2, "shuai");
         System.out.println(all.get(2));
 
         System.out.println(all.contains("shuai"));
