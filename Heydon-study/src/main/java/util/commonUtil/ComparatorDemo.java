@@ -1,7 +1,5 @@
 package util.commonUtil;
 
-import lombok.Data;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
