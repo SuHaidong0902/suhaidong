@@ -9,7 +9,7 @@ import static java.util.Base64.*;
  */
 public class Base64 {
     public static void main(String[] args) {
-        String str = "suhaidong";
+        String str = "suHaiDong";
         String encStr = new String(java.util.Base64.getEncoder().encode(str.getBytes()));
         System.out.println(encStr);
         String decStr = new String(java.util.Base64.getDecoder().decode(encStr));
