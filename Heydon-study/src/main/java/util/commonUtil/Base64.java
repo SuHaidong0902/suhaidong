@@ -1,7 +1,5 @@
 package util.commonUtil;
 
-import static java.util.Base64.*;
-
 /**
  * @Author: suhaidong
  * @DATE: 2021/5/20

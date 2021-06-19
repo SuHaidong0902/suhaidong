@@ -30,6 +30,7 @@ class NumberFactory {
 public class RandomDemo {
     public static void main(String[] args) {
         int[] result = NumberFactory.create(5);
+
         System.out.println(Arrays.toString(result));
     }
 }
