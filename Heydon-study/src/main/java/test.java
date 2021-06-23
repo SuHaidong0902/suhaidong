@@ -7,10 +7,12 @@ import java.util.Arrays;
  */
 public class test {
     public static void main(String[] args) {
-        String[] arr = {"A", "X", "AB", "C"};
-        Arrays.sort(arr);
-        for (String x:arr){
+        String a = "192.168.1.1";
+        String [] num = a.split("\\.");
+
+        for (String x : num){
             System.out.println(x);
         }
+
     }
 }
