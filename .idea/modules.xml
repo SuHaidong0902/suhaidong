@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Heydon-SQL/Heydon-SQL.iml" filepath="$PROJECT_DIR$/Heydon-SQL/Heydon-SQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heydon-inte/Heydon-interview.iml" filepath="$PROJECT_DIR$/Heydon-inte/Heydon-interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heydon-java/Heydon-java.iml" filepath="$PROJECT_DIR$/Heydon-java/Heydon-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heydon-redis/Heydon-redis.iml" filepath="$PROJECT_DIR$/Heydon-redis/Heydon-redis.iml" />

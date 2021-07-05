@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/Heydon-java/pom.xml" />
         <option value="$PROJECT_DIR$/Heydon-inte/pom.xml" />
         <option value="$PROJECT_DIR$/Heydon-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/Heydon-SQL/pom.xml" />
       </list>
     </option>
   </component>

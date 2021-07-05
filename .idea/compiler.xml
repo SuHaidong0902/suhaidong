@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Heydon-interview" />
+        <module name="Heydon-SQL" />
         <module name="Heydon-java" />
         <module name="Heydon-redis" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="Heydon-interview" target="8" />
       <module name="Heydon-java" target="1.8" />
       <module name="Heydon-redis" target="8" />
+      <module name="Heydon-SQL" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
