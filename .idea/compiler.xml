@@ -7,14 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Heydon-inte" />
+        <module name="Heydon-interview" />
         <module name="Heydon-java" />
+        <module name="Heydon-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Heydon-inte" target="8" />
       <module name="Heydon-interview" target="8" />
       <module name="Heydon-java" target="1.8" />
+      <module name="Heydon-redis" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
