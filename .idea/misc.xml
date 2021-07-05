@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/Heydon-study/pom.xml" />
+        <option value="$PROJECT_DIR$/Heydon-interview/pom.xml" />
+        <option value="$PROJECT_DIR$/Heydon-java/pom.xml" />
       </list>
     </option>
   </component>
