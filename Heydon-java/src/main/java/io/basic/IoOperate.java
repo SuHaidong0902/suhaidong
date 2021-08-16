@@ -11,8 +11,8 @@ import java.util.Objects;
  */
 public class IoOperate {
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study/IoDemo" +
-                File.separator + "test.zip");
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java/IoDemo" +
+                File.separator + "123.txt");
         if (file.exists()) {
             System.out.println(file.canRead());
             System.out.println(file.canWrite());

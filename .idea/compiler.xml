@@ -15,10 +15,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Heydon-inte" target="8" />
-      <module name="Heydon-interview" target="8" />
+      <module name="Heydon-interview" target="1.8" />
       <module name="Heydon-java" target="1.8" />
-      <module name="Heydon-redis" target="8" />
-      <module name="Heydon-SQL" target="8" />
+      <module name="Heydon-redis" target="1.8" />
+      <module name="Heydon-SQL" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
