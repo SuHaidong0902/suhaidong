@@ -15,6 +15,5 @@ public class test {
         System.out.println(cls.getName());*/
         Class<?> cls = Class.forName("fanshe.Person");
         System.out.println(cls.getName());
-
     }
 }
