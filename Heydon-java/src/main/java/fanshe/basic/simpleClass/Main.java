@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         String value = "ename:Smith|job:Clerk";
         Emp emp = ClassInstanceFactory.create(Emp.class,value);
-        System.out.println("姓名：" + emp.getEName() + "、性别：" + emp.getJob());
+        System.out.println("姓名：" + emp.getEname() + "、性别：" + emp.getJob());
 
         /*Emp emp = new Emp();
         emp.setEName("123");

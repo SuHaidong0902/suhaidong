@@ -1,5 +1,7 @@
 package fanshe.basic.simpleClass;
 
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * @Author 海东
  * @Date: 2021/9/7 12:03 上午
@@ -16,9 +18,15 @@ public class ClassInstanceFactory {
      * @return 已经配置好属性内容的java类对象
      */
     public static <T> T create(Class<?> clazz, String value){
-
-
-        return null;
+        // 如果采用反射进行对象属性设置，类中必须有无参构造
+        try {
+            Object obj = clazz.getDeclaredConstructor().newInstance();
+            BeanUtils.setValue(obj,value); // 通过反射，设置属性
+            return (T) obj;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

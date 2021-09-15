@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 public class Emp {
-    private String eName;
+    private String ename;
     private String job;
 
 }
