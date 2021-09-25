@@ -5,6 +5,7 @@ import lombok.SneakyThrows;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -25,13 +26,49 @@ public class BeanUtils {
         String[] results = value.split("\\|");
         for (int x = 0; x < results.length; x++){
             String[] attVal = results[x].split(":");
-            Field field = obj.getClass().getDeclaredField(attVal[0]);//获取成员
-            // System.out.println("----------" + field +"--------");
-            Method setMethod = obj.getClass().getDeclaredMethod(
-                    "set" + StringUtils.initCap(attVal[0]),field.getType());
-            // System.out.println("*********" + setMethod +"***********");
-            Object convertValue = BeanUtils.convertAttributeValue(field.getType().getName(), attVal[1] );
-            setMethod.invoke(obj,convertValue); // 调用setter方法设置内容
+            if (attVal[0].contains(".")){ //多级配置
+                String [] temp = attVal[0].split("\\.");
+                Object currentObject = obj;
+                // System.out.println(Arrays.toString(temp));
+                // 最后一位是属性名称，不在本次实例化范围内
+                for (int y = 0; y <temp.length - 1; y++){
+                    // 调用getter方法，如果getter返回空，表示对象未实例化
+                    Method getMethod = currentObject.getClass().getDeclaredMethod(
+                            "get" + StringUtils.initCap(temp[y]));
+                    Object tempObject = getMethod.invoke(currentObject);
+
+                    if (tempObject == null){ //该对象现在并没有实例化
+                        Field field = currentObject.getClass().getDeclaredField(temp[y]); // 获取属性类型
+                        Method method = currentObject.getClass().getDeclaredMethod(
+                                "set" + StringUtils.initCap(temp[y]),field.getType());
+                        Object newObject = field.getType().getDeclaredConstructor().newInstance();
+                        method.invoke(currentObject, newObject);
+                        currentObject = newObject;
+                    }else{
+                        currentObject = tempObject;
+                    }
+                    // System.out.println(temp[y] + "-----" + currentObject);
+                }
+                // 进行属性内容设置
+                Field field = currentObject.getClass().getDeclaredField(temp[temp.length - 1]);
+                System.out.println("&&&&&&&&&&&&&&&&&&&" + field);
+                Method setMethod = currentObject.getClass().getDeclaredMethod(
+                        "set" + StringUtils.initCap(temp[temp.length - 1]), field.getType());
+                Object convertValue = BeanUtils.convertAttributeValue(
+                        field.getType().getName(), attVal[1]);
+                setMethod.invoke(currentObject, convertValue); // 调用setter方法设置内容
+
+            }else {
+                Field field = obj.getClass().getDeclaredField(attVal[0]);//获取成员
+                // System.out.println("----------" + field +"--------");
+                Method setMethod = obj.getClass().getDeclaredMethod(
+                        "set" + StringUtils.initCap(attVal[0]), field.getType());
+                // System.out.println("*********" + setMethod +"***********");
+                Object convertValue = BeanUtils.convertAttributeValue(
+                        field.getType().getName(), attVal[1]);
+                // System.out.println("######" + convertValue +"######");
+                setMethod.invoke(obj, convertValue); // 调用setter方法设置内容
+            }
         }
     }
 

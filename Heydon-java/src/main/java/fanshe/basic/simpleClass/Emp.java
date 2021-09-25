@@ -16,5 +16,5 @@ public class Emp {
     private double salary;
     private long empno;
     private Date hiredate;
-
+    private Dept dept;
 }
