@@ -15,7 +15,7 @@ public class ReaderDemo {
     @SneakyThrows
     public static void main(String[] args) {
         File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
-                File.separator + "IoDemo/Writer.txt");
+                File.separator + "IoDemo/OutputStream.txt");
         if (!file.exists()){
             System.out.println("file can not exists.");
         }

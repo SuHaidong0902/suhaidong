@@ -14,7 +14,7 @@ import java.io.InputStream;
 public class InputStreamDemo {
     @SneakyThrows
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
+        File file = new File("/Users/haidong/Downloads/javaCode/suhaidong/Heydon-java"+
                 File.separator + "IoDemo/OutputStream.txt");
         if (!file.exists()){
             System.out.println("文件不存在");
