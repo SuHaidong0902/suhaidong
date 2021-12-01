@@ -15,10 +15,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
-
-
-
 /**
  * @Author haiDong
  * @Date: 2021/6/19 3:56 下午
