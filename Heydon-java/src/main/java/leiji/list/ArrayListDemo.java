@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * @Author 海东
  * @Date: 2021/12/1 11:14 下午
- * @Description:
+ * @Description: 实现自定义类的保存
  */
 public class ArrayListDemo {
     public static void main(String[] args) {
@@ -20,7 +20,5 @@ public class ArrayListDemo {
         all.forEach((str)->{
             System.out.print(str + "、");
         });
-
-
     }
 }
