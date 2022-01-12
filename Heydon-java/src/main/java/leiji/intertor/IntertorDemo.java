@@ -1,8 +1,6 @@
 package leiji.intertor;
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * @Author 海东
@@ -11,7 +9,8 @@ import java.util.TreeSet;
  */
 public class IntertorDemo {
     public static void main(String[] args) {
-        Set<String> all = new TreeSet<>();
+        //Set<String> all = new TreeSet<>();
+        List<String> all = new ArrayList<>();
         all.add("su");
         all.add("hai");
         all.add("dong");
@@ -20,7 +19,7 @@ public class IntertorDemo {
         Iterator<String> iter = all.iterator(); // 实例化iterator对象
         while (iter.hasNext()){
             String str = iter.next();
-            if ("su".equals(str)){
+            if ("hai".equals(str)){
                 iter.remove();
             }else{
             System.out.println(str);}
