@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Heydon-interview/Heydon-interview.iml" filepath="$PROJECT_DIR$/Heydon-interview/Heydon-interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heydon-java/Heydon-java.iml" filepath="$PROJECT_DIR$/Heydon-java/Heydon-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heydon-redis/Heydon-redis.iml" filepath="$PROJECT_DIR$/Heydon-redis/Heydon-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Leecode/Leecode.iml" filepath="$PROJECT_DIR$/Leecode/Leecode.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/suhaidong.iml" filepath="$PROJECT_DIR$/.idea/suhaidong.iml" />
     </modules>
   </component>
