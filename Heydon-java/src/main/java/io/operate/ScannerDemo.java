@@ -25,9 +25,9 @@ public class ScannerDemo {
 
 
         Scanner scan = new Scanner(new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java" +
-                                File.separator + "IoDemo/Scanner.txt"));
+                File.separator + "IoDemo/Scanner.txt"));
         scan.useDelimiter("/n");
-        while (scan.hasNext()){
+        while (scan.hasNext()) {
             System.out.println(scan.next());
         }
     }

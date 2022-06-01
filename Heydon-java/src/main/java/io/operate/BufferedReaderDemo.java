@@ -16,9 +16,9 @@ public class BufferedReaderDemo {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("please input age：");
         String str = br.readLine();
-        if (str.matches("\\d{1,3}")){
+        if (str.matches("\\d{1,3}")) {
             System.out.println("age is :" + str);
-        }else{
+        } else {
             System.out.println("please sure.");
         }
     }

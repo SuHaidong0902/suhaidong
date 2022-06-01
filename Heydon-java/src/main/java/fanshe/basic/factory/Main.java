@@ -11,7 +11,7 @@ public class Main {
         IMessage cmg = Factory.getInstance("fanshe.basic.factory.CloudMessage", IMessage.class);
         msg.send();
         cmg.send();
-        IService service = Factory.getInstance("fanshe.basic.factory.HouseService",IService.class);
+        IService service = Factory.getInstance("fanshe.basic.factory.HouseService", IService.class);
         service.service();
     }
 }

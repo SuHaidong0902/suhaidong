@@ -25,15 +25,15 @@ public class RenameFile {
                 }
             }
         }
-        if (file.isFile()){
+        if (file.isFile()) {
             String fileName = null;
-            if (file.getName().contains(".")){
-                fileName = file.getName().substring(0,file.getName().lastIndexOf(".")) + ".txt";
+            if (file.getName().contains(".")) {
+                fileName = file.getName().substring(0, file.getName().lastIndexOf(".")) + ".txt";
                 System.out.println(fileName + "-----");
-            }else{
+            } else {
                 fileName = file.getName() + ".txt";
             }
-            File newFile = new File(file.getParentFile(),fileName);
+            File newFile = new File(file.getParentFile(), fileName);
             file.renameTo(newFile);
         }
     }

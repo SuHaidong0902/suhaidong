@@ -7,15 +7,17 @@ import java.util.Objects;
  * @Date: 2021/12/5 9:20 下午
  * @Description:
  */
-public class Person implements Comparable<Person>{ // 比较器
+public class Person implements Comparable<Person> { // 比较器
     private String name;
     private int age;
-    public Person(String name, int age){
+
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "姓名：" + this.name + "、年龄：" + this.age;
     }
 
@@ -38,9 +40,10 @@ public class Person implements Comparable<Person>{ // 比较器
 
     @Override
     public int compareTo(Person per) {
-        if (this.age < per.age){
+        if (this.age < per.age) {
             return -1;
-        }if ((this.age > per.age)){
+        }
+        if ((this.age > per.age)) {
             return 1;
         }
         return this.name.compareTo(per.name);

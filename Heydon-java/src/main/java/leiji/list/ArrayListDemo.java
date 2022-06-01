@@ -17,7 +17,7 @@ public class ArrayListDemo {
         all.add("dong");
         all.remove("dong");
         System.out.println("集合是否为空？" + all.isEmpty() + "集合元素个数" + all.size());
-        all.forEach((str)->{
+        all.forEach((str) -> {
             System.out.print(str + "、");
         });
     }

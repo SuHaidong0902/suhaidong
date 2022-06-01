@@ -7,7 +7,7 @@ package fanshe.basic.classLoader;
  * 没搞定
  */
 public class Message {
-    public void send(){
+    public void send() {
         System.out.println("自定义ClassLoader，sendMessage......");
     }
 }

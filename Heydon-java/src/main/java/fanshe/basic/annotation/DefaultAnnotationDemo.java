@@ -13,17 +13,20 @@ import java.lang.reflect.Method;
  */
 
 @Retention(RetentionPolicy.RUNTIME) // 定义运行时策略
-@interface DefaultAnnotation{
+@interface DefaultAnnotation {
     String title();
+
     String url() default "www.baidu.com";
 
 }
-class Message{
-    @DefaultAnnotation(title="haidong",url = "www.hao123.com")
-    public void send(String msg){
+
+class Message {
+    @DefaultAnnotation(title = "haidong", url = "www.hao123.com")
+    public void send(String msg) {
         System.out.println("【消息发送】：" + msg);
     }
 }
+
 public class DefaultAnnotationDemo {
     @SneakyThrows
     public static void main(String[] args) {
@@ -33,7 +36,7 @@ public class DefaultAnnotationDemo {
         System.out.println(anno.url());
 
         String msg = anno.title() + '\t' + anno.url();
-        method.invoke(Message.class.getDeclaredConstructor().newInstance(),msg);
+        method.invoke(Message.class.getDeclaredConstructor().newInstance(), msg);
 
 
     }

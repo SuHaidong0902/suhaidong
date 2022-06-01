@@ -34,9 +34,11 @@ public class JavaThreadDemo {
 
 class Channel {
     private static final ThreadLocal<Message> THREAD_LOCAL = new ThreadLocal<Message>();
+
     public void setMessage(Message m) {
         THREAD_LOCAL.set(m);
     }
+
     public void sendMessage() {
         System.out.println(Thread.currentThread().getName() + "【消息发送】： " + THREAD_LOCAL.get().getInfo());
     }

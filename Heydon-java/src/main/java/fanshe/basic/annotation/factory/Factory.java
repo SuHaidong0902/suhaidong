@@ -8,10 +8,12 @@ import lombok.SneakyThrows;
  * @Description:
  */
 public class Factory {
-    private Factory(){}
+    private Factory() {
+    }
+
     @SneakyThrows
-    public static <T> T getInstance(Class<T> clazz){ // 直接返回实例化的操作对象
-        return (T)new MessageProxy().bind(clazz.getDeclaredConstructor().newInstance());
+    public static <T> T getInstance(Class<T> clazz) { // 直接返回实例化的操作对象
+        return (T) new MessageProxy().bind(clazz.getDeclaredConstructor().newInstance());
 
     }
 }

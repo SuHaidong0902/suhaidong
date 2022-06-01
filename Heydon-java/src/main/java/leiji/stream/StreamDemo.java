@@ -15,9 +15,9 @@ import java.util.stream.Stream;
 public class StreamDemo {
     public static void main(String[] args) {
         List<String> all = new ArrayList<>();
-        Collections.addAll(all,"java","python","C","C++","JavaScript","jsp","json");
+        Collections.addAll(all, "java", "python", "C", "C++", "JavaScript", "jsp", "json");
         Stream<String> stream = all.stream(); //获得Stream接口对象
-       // System.out.println(stream.count()); //输出元素的个数
+        // System.out.println(stream.count()); //输出元素的个数
 
         // 要求将每个元素的字母变为小写字母，并且判断每个元素是否存在
         /*Stream<String> result = stream.filter((ele) ->
@@ -35,8 +35,6 @@ public class StreamDemo {
                 ele.toLowerCase().contains("j")).skip(1).limit(5);
         List<String> resultList = result.collect(Collectors.toList());
         System.out.println(resultList);
-
-
 
 
     }

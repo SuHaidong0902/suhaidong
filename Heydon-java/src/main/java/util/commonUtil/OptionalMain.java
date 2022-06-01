@@ -7,23 +7,27 @@ import java.util.Optional;
  * @DATE: 2021/5/20
  * @Description: TODO
  */
-interface IMessage{
+interface IMessage {
     String getContent();
 }
-class IMessageImpl implements IMessage{
+
+class IMessageImpl implements IMessage {
     @Override
     public String getContent() {
         return "suhaidong";
     }
 }
-class MessageUtil{
-    public static Optional<IMessage> getMessage(){
+
+class MessageUtil {
+    public static Optional<IMessage> getMessage() {
         return Optional.ofNullable(null); // 有对象
     }
-    public static void useMessage(IMessage msg){
-            System.out.println(msg.getContent());
+
+    public static void useMessage(IMessage msg) {
+        System.out.println(msg.getContent());
     }
 }
+
 public class OptionalMain {
     public static void main(String[] args) {
         MessageUtil.useMessage(MessageUtil.getMessage().orElse(new IMessageImpl()));

@@ -9,9 +9,9 @@ import java.io.File;
  */
 public class ListDir {
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study"+
-               File.separator + "IoDemo");
-       // File file = new File("/Users/suhaidong");
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study" +
+                File.separator + "IoDemo");
+        // File file = new File("/Users/suhaidong");
         listDir(file);
     }
 

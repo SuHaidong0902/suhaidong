@@ -13,9 +13,10 @@ import java.lang.reflect.Method;
  */
 @FunctionalInterface
 @Deprecated()
-interface IMessage{
+interface IMessage {
     void send(String msg);
 }
+
 @SuppressWarnings("serial") // 无法在程序执行的时候获取
 class MessageImpl implements IMessage, Serializable {
     @Override
@@ -23,13 +24,14 @@ class MessageImpl implements IMessage, Serializable {
         System.out.println("【消息发送】XXX" + msg);
     }
 }
+
 public class AnnotationDemo {
     @SneakyThrows
     public static void main(String[] args) {
         {
             // 获取接口上的Annotation信息
             Annotation annotations[] = IMessage.class.getAnnotations();
-            for (Annotation temp : annotations){
+            for (Annotation temp : annotations) {
                 System.out.println(temp);
             }
         }
@@ -37,7 +39,7 @@ public class AnnotationDemo {
         {
             // 获取子类上的Annotation信息，无法在程序执行的时候获取
             Annotation annotations[] = MessageImpl.class.getAnnotations();
-            for (Annotation temp : annotations){
+            for (Annotation temp : annotations) {
                 System.out.println(temp);
             }
         }
@@ -46,7 +48,7 @@ public class AnnotationDemo {
             // 获取子MessageImpl方法上的Annotation信息，无法在程序执行的时候获取
             Method method = MessageImpl.class.getDeclaredMethod("send", String.class);
             Annotation annotations[] = method.getAnnotations();
-            for (Annotation temp : annotations){
+            for (Annotation temp : annotations) {
                 System.out.println(temp);
             }
         }

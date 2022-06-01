@@ -12,11 +12,12 @@ package javaStudy.singleton;
 public class Singleton {
     private static volatile Singleton instance = null;
 
-    private Singleton(){
+    private Singleton() {
         System.out.println("【" + Thread.currentThread().getName() + "】******实例化Singleton类对象*******");
     }
-    public static Singleton getInstance(){
-        if (instance == null){
+
+    public static Singleton getInstance() {
+        if (instance == null) {
             synchronized (Singleton.class) {
                 if (instance == null) {
                     instance = new Singleton();
@@ -25,7 +26,8 @@ public class Singleton {
         }
         return instance;
     }
-    public void print(){
+
+    public void print() {
         System.out.println("海东");
     }
 }

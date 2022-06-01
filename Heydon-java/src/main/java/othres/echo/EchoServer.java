@@ -20,13 +20,13 @@ public class EchoServer {
         scanner.useDelimiter("\n"); // 设置分隔符
         PrintStream out = new PrintStream(client.getOutputStream()); // 客户端输出流
         boolean flag = true;
-        while(flag){
-            if (scanner.hasNext()){ // 现在有数据发送
+        while (flag) {
+            if (scanner.hasNext()) { // 现在有数据发送
                 String val = scanner.next().trim(); // 接收发送的数据
-                if ("byebye".equalsIgnoreCase(val)){
+                if ("byebye".equalsIgnoreCase(val)) {
                     out.println("byebye,this is no chance...");
                     flag = false;
-                }else{
+                } else {
                     out.println("[ECHO]: " + val);
                 }
             }

@@ -6,8 +6,10 @@ package io.vote;
  * @Description:
  */
 public class Factory {
-    private Factory(){}
-    public static IVoteService getInstance(){
+    private Factory() {
+    }
+
+    public static IVoteService getInstance() {
         return new VoteServiceImpl();
     }
 }

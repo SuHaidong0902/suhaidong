@@ -17,12 +17,13 @@ public class IntertorDemo {
         all.add("su");
 
         Iterator<String> iter = all.iterator(); // 实例化iterator对象
-        while (iter.hasNext()){
+        while (iter.hasNext()) {
             String str = iter.next();
-            if ("hai".equals(str)){
+            if ("hai".equals(str)) {
                 iter.remove();
-            }else{
-            System.out.println(str);}
+            } else {
+                System.out.println(str);
+            }
         }
         System.out.println("******" + all);
     }

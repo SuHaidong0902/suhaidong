@@ -14,13 +14,13 @@ import java.io.PrintWriter;
 public class PrintIODemo {
     @SneakyThrows
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java" +
                 File.separator + "IoDemo/PrintIODemo.txt");
         PrintWriter pu = new PrintWriter(new FileOutputStream(file));
         String name = "小A";
         int age = 18;
         double salary = 54386.9758;
-        pu.printf("姓名：%s，年龄：%d，收入：%1.2f",name,age,salary,true);
+        pu.printf("姓名：%s，年龄：%d，收入：%1.2f", name, age, salary, true);
         pu.close();
 
     }

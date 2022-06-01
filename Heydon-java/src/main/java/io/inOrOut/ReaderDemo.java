@@ -14,15 +14,15 @@ import java.io.Reader;
 public class ReaderDemo {
     @SneakyThrows
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java" +
                 File.separator + "IoDemo/OutputStream.txt");
-        if (!file.exists()){
+        if (!file.exists()) {
             System.out.println("file can not exists.");
         }
         Reader in = new FileReader(file);
         char[] data = new char[1024];
         int len = in.read(data);
-        System.out.println("【读取内容【" + new String(data,0,len) + "】");
+        System.out.println("【读取内容【" + new String(data, 0, len) + "】");
         in.close();
 
 

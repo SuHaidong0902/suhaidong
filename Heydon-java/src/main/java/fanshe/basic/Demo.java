@@ -8,15 +8,17 @@ import sun.misc.Unsafe;
  * @Date: 2021/8/23 11:40 下午
  * @Description:
  */
-class Person{
-    public Person(){
+class Person {
+    public Person() {
         System.out.println("Constructor");
     }
+
     @Override
     public String toString() {
         return "toString demo";
     }
 }
+
 public class Demo {
     @SneakyThrows
     public static void main(String[] args) {

@@ -1,9 +1,6 @@
 package hot100;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 /**
  * @Author 海东
@@ -13,18 +10,18 @@ import java.util.Map;
 public class _4_LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         int len = s.length();
-        if (len == 0){
+        if (len == 0) {
             throw new NullPointerException("输入为空....");
         }
         HashMap<Character, Integer> map = new HashMap<>(s.length());
         int max = 0;
         int left = 0;
-        for(int i = 0; i < len; i ++){
-            if(map.containsKey(s.charAt(i))){
-                left = Math.max(left,map.get(s.charAt(i)) + 1);
+        for (int i = 0; i < len; i++) {
+            if (map.containsKey(s.charAt(i))) {
+                left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
-            map.put(s.charAt(i),i);
-            max = Math.max(max,i-left+1);
+            map.put(s.charAt(i), i);
+            max = Math.max(max, i - left + 1);
         }
         return max;
 

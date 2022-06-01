@@ -6,7 +6,7 @@ package fanshe.basic.classLoader;
  * @Description: 1.随意编写一个程序，并保存在磁盘上，不打包
  */
 public class Message {
-    public void send(){
+    public void send() {
         System.out.println("自定义ClassLoader，sendMessage......");
     }
 }

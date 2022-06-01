@@ -14,18 +14,21 @@ public class RegxDemo {
         }
         String email = args[0];*/
         String email = "839@qq.com";
-        if (Validator.isEmail(email)){
+        if (Validator.isEmail(email)) {
             System.out.println("输入email正确");
-        }else {
+        } else {
             System.out.println("输入email错误");
         }
 
     }
 }
-class Validator{
-    private Validator(){ }
-    public static boolean isEmail(String email){
-        if (email == null || "".equals(email)){
+
+class Validator {
+    private Validator() {
+    }
+
+    public static boolean isEmail(String email) {
+        if (email == null || "".equals(email)) {
             return false;
         }
         String regx = "\\w+@\\w+\\.\\w+";

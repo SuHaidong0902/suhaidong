@@ -11,8 +11,10 @@ import io.ioTest.service.INumberService;
 public class Factory {
     private static Object NumberServiceImpl;
 
-    private Factory(){}
-    public static INumberService getInstance(){
+    private Factory() {
+    }
+
+    public static INumberService getInstance() {
         return new INumberServiceImpl();
     }
 }

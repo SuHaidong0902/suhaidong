@@ -12,15 +12,15 @@ import java.util.Map;
 public class SumOfUnique {
     public int sumOfUnique(int[] nums) {
         int len = nums.length;
-        Map<Integer,Integer> map = new HashMap<>(len);
+        Map<Integer, Integer> map = new HashMap<>(len);
         int sum = 0;
-        for (int num : nums){
-            if (!map.containsKey(num)){
+        for (int num : nums) {
+            if (!map.containsKey(num)) {
                 sum += num;
-                map.put(num,0);
-            }else if(map.get(num) == 0){
+                map.put(num, 0);
+            } else if (map.get(num) == 0) {
                 sum -= num;
-                map.put(num,1);
+                map.put(num, 1);
             }
         }
         return sum;
@@ -28,7 +28,7 @@ public class SumOfUnique {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int []{1,1,1,2,3};
+        int[] nums = new int[]{1, 1, 3, 1, 2, 1, 2, 3};
         SumOfUnique s = new SumOfUnique();
         System.out.println(s.sumOfUnique(nums));
     }

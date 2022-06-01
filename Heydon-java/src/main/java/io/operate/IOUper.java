@@ -18,8 +18,8 @@ public class IOUper {
         OutputStream output = new ByteArrayOutputStream();
         // ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
         int data = 0;
-        while ((data = input.read()) != -1){
-            output.write(Character.toUpperCase((char)data));
+        while ((data = input.read()) != -1) {
+            output.write(Character.toUpperCase((char) data));
             // byteOut.write(Character.toUpperCase(data));
         }
         // byte[] result = byteOut.toByteArray();

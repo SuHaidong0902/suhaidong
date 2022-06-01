@@ -16,19 +16,21 @@ public class CoinDemo {
         System.out.println("正面：" + c.getFront() + "\n反面：" + c.getBack());
     }
 }
-class Coin{
+
+class Coin {
     @Getter
     private int front;
     @Getter
     private int back;
     private Random random = new Random();
-    public void throwCoin(int num){
-        for (int x = 0; x < num; x++){
+
+    public void throwCoin(int num) {
+        for (int x = 0; x < num; x++) {
             int temp = random.nextInt(2);
-            if (temp == 0){
+            if (temp == 0) {
                 front++;
             }
-            if (temp == 1){
+            if (temp == 1) {
                 back++;
             }
         }

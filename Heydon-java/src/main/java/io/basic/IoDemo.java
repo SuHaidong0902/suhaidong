@@ -12,15 +12,15 @@ import java.io.File;
 public class IoDemo {
     @SneakyThrows
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study"+
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study" +
                 File.separator + "test/海东测试file.txt");
-        if (!file.getParentFile().exists()){
+        if (!file.getParentFile().exists()) {
             file.mkdirs();
         }
-        if (file.exists()){
+        if (file.exists()) {
             file.delete();
             System.out.println("文件删除成功~");
-        }else{
+        } else {
             file.createNewFile();
             System.out.println("文件创建成功~");
         }

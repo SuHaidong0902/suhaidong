@@ -11,9 +11,9 @@ import java.util.Map;
 public class LinkedHashMapDemo {
     public static void main(String[] args) {
         Map<String, Integer> map = new LinkedHashMap<String, Integer>();
-        map.put("one",1);
-        map.put("two",2);
-        map.put("three",1);
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 1);
         System.out.println(map);
     }
 }

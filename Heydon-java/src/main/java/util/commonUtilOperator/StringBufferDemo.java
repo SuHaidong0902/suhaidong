@@ -10,10 +10,10 @@ public class StringBufferDemo {
         StringBuffer sb = new StringBuffer();
         char a = 'a';
         char z = 'z';
-        for (int x = a; x <= z; x++){
-            sb.append((char)x);
+        for (int x = a; x <= z; x++) {
+            sb.append((char) x);
         }
-        sb.reverse().delete(0,5);
+        sb.reverse().delete(0, 5);
         System.out.println(sb);
     }
 

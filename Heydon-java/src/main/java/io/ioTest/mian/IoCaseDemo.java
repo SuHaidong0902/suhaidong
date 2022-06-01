@@ -9,7 +9,6 @@ import java.io.File;
 /**
  * @Author 海东
  * @Date: 2021/8/10 11:39 下午
- *
  */
 public class IoCaseDemo {
    /* private static final String SAVE_DIR = "/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
@@ -28,7 +27,7 @@ public class IoCaseDemo {
         INumberService ins = new INumberServiceImpl();
         INumberService iNumberService = Factory.getInstance();
         int[] result = ins.stat(3);
-        System.out.println("最大值:" + result[0] +"、最小值：" + result[1] );
+        System.out.println("最大值:" + result[0] + "、最小值：" + result[1]);
 
         /**
          *

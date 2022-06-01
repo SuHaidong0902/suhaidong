@@ -12,10 +12,11 @@ import java.io.*;
 
 public class SerializableDemo {
     private static final File SAVE_FILE = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java" +
-                            File.separator + "IoDemo/SerializableDemo.txt");
+            File.separator + "IoDemo/SerializableDemo.txt");
+
     @SneakyThrows
     public static void main(String[] args) {
-        saveObject(new Person("张三",18));
+        saveObject(new Person("张三", 18));
         System.out.println(loadObject());
     }
 
@@ -25,29 +26,30 @@ public class SerializableDemo {
         oos.writeObject(obj); // 序列化
         oos.close();
     }
+
     @SneakyThrows
-    public static Object loadObject(){
+    public static Object loadObject() {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(SAVE_FILE));
         Object obj = ois.readObject(); // 反序列化
         ois.close();
         return obj;
     }
 
-static class Person implements Serializable{
-    private transient String name;
-    private int age;
+    static class Person implements Serializable {
+        private transient String name;
+        private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
     }
-}
 }

@@ -15,11 +15,11 @@ public class TreeSetClass {
     public static void main(String[] args) {
         Set<Person> all = new HashSet<>();
         // Set<Person> all = new TreeSet<>();
-        all.add(new Person("zhangsan",18));
-        all.add(new Person("lisi",20));
-        all.add(new Person("wangwu",18));
-        all.add(new Person("zhangsan",28));
-        all.add(new Person("zhangsan",18));
+        all.add(new Person("zhangsan", 18));
+        all.add(new Person("lisi", 20));
+        all.add(new Person("wangwu", 18));
+        all.add(new Person("zhangsan", 28));
+        all.add(new Person("zhangsan", 18));
         all.forEach(System.out::println);
 
 

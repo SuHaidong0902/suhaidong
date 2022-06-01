@@ -13,10 +13,10 @@ public class HtmlDemo {
         String str = "<font face=\"Arial,Serif\" size=\"2\" color=\"red\">";
         String regx = "\\w+=\"[a-zA-Z0-9,\\+]+\"";
         Matcher matcher = Pattern.compile(regx).matcher(str);
-        while (matcher.find()){
+        while (matcher.find()) {
             String temp = matcher.group(0);
             String[] result = temp.split("=");
-            System.out.println(result[0] + "   " + result[1].replaceAll("\"",""));
+            System.out.println(result[0] + "   " + result[1].replaceAll("\"", ""));
         }
     }
 }

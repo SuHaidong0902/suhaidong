@@ -13,21 +13,23 @@ import java.util.Scanner;
  * 定义输入程序类
  */
 public class InputUtil {
-    private InputUtil(){}
-    public static String getString(String prompt){
+    private InputUtil() {
+    }
+
+    public static String getString(String prompt) {
         String str = null;
         boolean flag = true;
-        while (flag){
+        while (flag) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(prompt);
-            if (scanner.hasNext()){
+            if (scanner.hasNext()) {
                 str = scanner.next().trim();
-                if (!"".equals(str)){
+                if (!"".equals(str)) {
                     flag = false;
-                }else {
+                } else {
                     System.out.println("输入的内容不允许为空");
                 }
-            }else {
+            } else {
                 System.out.println("输入的内容不允许为空");
             }
         }
@@ -36,11 +38,12 @@ public class InputUtil {
 
     /**
      * 实现键盘接收
+     *
      * @param prompt
      * @return 可以使用的数字
      */
     @SneakyThrows
-    public static int getInt(String prompt){
+    public static int getInt(String prompt) {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         int num = 0;
         boolean flag = true;
@@ -54,6 +57,6 @@ public class InputUtil {
                 System.out.println("输入的内容不是数字.");
             }
         }
-        return  num;
+        return num;
     }
 }

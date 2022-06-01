@@ -10,17 +10,20 @@ import java.lang.annotation.RetentionPolicy;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface UseMessage{
+@interface UseMessage {
     public Class<?> clazz();
 }
+
 @UseMessage(clazz = NetMessageImpl.class) // 利用Annotation实现了类的使用
 public class MessageService {
     private IMessage message;
-    public MessageService(){
+
+    public MessageService() {
         UseMessage use = MessageService.class.getAnnotation(UseMessage.class);
         this.message = (IMessage) Factory.getInstance(use.clazz());
     }
-    public void send(String msg){
+
+    public void send(String msg) {
         this.message.send(msg);
     }
 }

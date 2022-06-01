@@ -11,34 +11,34 @@ import java.util.HashMap;
  */
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length-1; i++){
-            for (int j = i+1; j < nums.length; j++){
-                if (nums[i] + nums[j] == target){
-                    return new int[]{i,j};
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
                 }
             }
         }
         throw new IllegalArgumentException("no two solution....");
     }
 
-    public int[] twoSum2(int[] nums, int target){
+    public int[] twoSum2(int[] nums, int target) {
         int len = nums.length;
-        HashMap<Integer,Integer> result = new HashMap<>(len -1);
-        for (int i = 0; i < len; i++){
-            if (result.containsKey(target - nums[i])){
-                return new int[]{result.get(target-nums[i]), i};
+        HashMap<Integer, Integer> result = new HashMap<>(len - 1);
+        for (int i = 0; i < len; i++) {
+            if (result.containsKey(target - nums[i])) {
+                return new int[]{result.get(target - nums[i]), i};
             }
-            result.put(nums[i],i);
+            result.put(nums[i], i);
         }
         throw new IllegalArgumentException("no two solution....");
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2,7,11,15};
+        int[] nums = new int[]{2, 7, 11, 15};
         int target = 9;
         TwoSum s = new TwoSum();
-        int[] result = s.twoSum2(nums,target);
-        for (int i : result){
+        int[] result = s.twoSum2(nums, target);
+        for (int i : result) {
             System.out.println(i);
         }
     }

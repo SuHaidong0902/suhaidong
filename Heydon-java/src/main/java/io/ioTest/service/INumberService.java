@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 public interface INumberService {
     /**
      * 输入数据，返回数据的最大值与最小值
+     *
      * @param count 输入数据的个数
      * @return 0为最大值，1为最小值
      */

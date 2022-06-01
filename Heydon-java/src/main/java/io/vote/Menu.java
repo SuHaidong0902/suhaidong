@@ -9,20 +9,22 @@ import io.ioTest.utils.InputUtil;
  */
 public class Menu {
     private IVoteService voteService;
-    public Menu(){
+
+    public Menu() {
         this.voteService = Factory.getInstance();
         this.vote();
     }
-    public void vote(){
+
+    public void vote() {
         Student[] stu = this.voteService.getData();
-        for (Student temp : stu){
-            System.out.println(temp.getSid() + ":" + temp.getName() + "【" + temp.getVote() +"】");
+        for (Student temp : stu) {
+            System.out.println(temp.getSid() + ":" + temp.getName() + "【" + temp.getVote() + "】");
         }
         int num = 10;
-        while (num != 0){
+        while (num != 0) {
             num = InputUtil.getInt("请输入数据(输入0代表结束)：");
             if (num != 0) {
-                if (!this.voteService.inc(num)){
+                if (!this.voteService.inc(num)) {
                     System.out.println("此选票无效，请重新输入...");
                 }
             }

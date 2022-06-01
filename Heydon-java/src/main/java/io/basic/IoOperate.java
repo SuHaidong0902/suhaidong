@@ -21,13 +21,13 @@ public class IoOperate {
             System.out.println(file.isDirectory());
             System.out.println(file.isFile());
             System.out.println(file.getParentFile() + "-----");
-            File file2 = new File(file.getParentFile(),"123");
-            System.out.println(file2+"12345");
+            File file2 = new File(file.getParentFile(), "123");
+            System.out.println(file2 + "12345");
         }
         // 列出目录下全部内容
         File file2 = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-study");
-        if (file2.isDirectory() && file2.listFiles() != null){
-            for (int x = 0; x < Objects.requireNonNull(file2.listFiles()).length; x++){
+        if (file2.isDirectory() && file2.listFiles() != null) {
+            for (int x = 0; x < Objects.requireNonNull(file2.listFiles()).length; x++) {
                 System.out.println(Objects.requireNonNull(file2.listFiles())[x]);
             }
         }

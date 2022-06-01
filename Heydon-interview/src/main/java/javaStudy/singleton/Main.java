@@ -7,10 +7,10 @@ package javaStudy.singleton;
  */
 public class Main {
     public static void main(String[] args) {
-        for (int x = 0; x < 3; x++){
-            new Thread(()->{
+        for (int x = 0; x < 3; x++) {
+            new Thread(() -> {
                 Singleton.getInstance().print();
-            } ,"单例消费端" + x).start();
+            }, "单例消费端" + x).start();
         }
     }
 }

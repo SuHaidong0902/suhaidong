@@ -11,18 +11,21 @@ import java.lang.reflect.Proxy;
  */
 public class MessageProxy implements InvocationHandler {
     private Object target;
-    public Object bind(Object target){
+
+    public Object bind(Object target) {
         this.target = target;
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),this);
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
     }
-    public boolean connect(){
+
+    public boolean connect() {
         System.out.println("【代理操作】进行消息发送通道的链接");
         return true;
     }
 
-    public void close(){
+    public void close() {
         System.out.println("【代理操作】关闭消息发送通道链接~~");
     }
+
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         try {
@@ -31,7 +34,7 @@ public class MessageProxy implements InvocationHandler {
             } else {
                 throw new Exception("[ERR]消息发送失败");
             }
-        }finally{
+        } finally {
             this.close();
         }
     }

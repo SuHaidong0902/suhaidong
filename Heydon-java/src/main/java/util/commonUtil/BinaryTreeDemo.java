@@ -10,17 +10,19 @@ public class BinaryTreeDemo {
 
     }
 }
-class BinaryTree <T extends Comparable<T>>{
-    private class Node{
+
+class BinaryTree<T extends Comparable<T>> {
+    private class Node {
         private Comparable<T> data;
         private Node parent;
         private Node left;
         private Node right;
-        public Node(Comparable<T> data){
+
+        public Node(Comparable<T> data) {
             this.data = data;
         }
 
-        public void addNode(Node newNode){
+        public void addNode(Node newNode) {
             if (newNode.data.compareTo((T) this.data) <= 0) {
                 if (this.left == null) {
                     this.left = newNode;

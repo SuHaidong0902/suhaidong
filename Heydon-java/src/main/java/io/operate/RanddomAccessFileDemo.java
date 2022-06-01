@@ -14,12 +14,12 @@ import java.nio.charset.StandardCharsets;
 public class RanddomAccessFileDemo {
     @SneakyThrows
     public static void main(String[] args) {
-        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java"+
+        File file = new File("/Users/suhaidong/Downloads/javaCode/suhaidong/Heydon-java" +
                 File.separator + "IoDemo/RandomAccessFileDemo.txt");
-        RandomAccessFile raf = new RandomAccessFile(file,"rw");
-        String[] names = new String[]{"zhangsan","lisi    ","wangwu  "};
-        int[] ages = new int[]{30,20,16};
-        for (int x = 0; x < names.length; x++){
+        RandomAccessFile raf = new RandomAccessFile(file, "rw");
+        String[] names = new String[]{"zhangsan", "lisi    ", "wangwu  "};
+        int[] ages = new int[]{30, 20, 16};
+        for (int x = 0; x < names.length; x++) {
             raf.write(names[x].getBytes());
             raf.writeInt(ages[x]);
         }

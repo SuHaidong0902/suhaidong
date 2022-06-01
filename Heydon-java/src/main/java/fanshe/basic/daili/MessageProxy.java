@@ -23,7 +23,7 @@ public class MessageProxy implements IMessage {
 
     @Override
     public void send() {
-        if (this.connect()){
+        if (this.connect()) {
             this.message.send();
             this.close();
         }

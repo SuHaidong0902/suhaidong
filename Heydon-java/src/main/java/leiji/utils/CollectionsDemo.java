@@ -14,7 +14,7 @@ public class CollectionsDemo {
     public static void main(String[] args) {
         List<String> all = new ArrayList<>();
         // 集合增加元素
-        Collections.addAll(all,"su","hai","Dong");
+        Collections.addAll(all, "su", "hai", "Dong");
         System.out.println(all);
 
         // 集合反转
@@ -25,6 +25,6 @@ public class CollectionsDemo {
         Collections.sort(all);
         System.out.println(all);
         // 使用集合二分查找
-        System.out.println(Collections.binarySearch(all,"su"));
+        System.out.println(Collections.binarySearch(all, "su"));
     }
 }
